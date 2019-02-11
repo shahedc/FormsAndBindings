@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using FormsAndBindings.Models;
 
 namespace FormsAndBindings.Data
 {
@@ -12,5 +13,6 @@ namespace FormsAndBindings.Data
             : base(options)
         {
         }
+        public DbSet<FormsAndBindings.Models.Human> Human { get; set; }
     }
 }
