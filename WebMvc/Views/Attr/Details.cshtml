@@ -1,0 +1,52 @@
+﻿@model FormsAndBindings.Models.Human
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Attr" asp-action="Index">Back to Index</a>
+
+<form asp-action="Details">
+    <div>
+        <ul>
+            <li>Id = @Model.Id</li>
+            <li>FirstName = @Model.FirstName</li>
+            <li>LastName = @Model.LastName</li>
+            <li>Address = @Model.Address</li>
+            <li>DateOfBirth = @Model.DateOfBirth</li>
+            <li>FavoriteNumber = @Model.FavoriteNumber</li>
+            <li>IsActive = @Model.IsActive</li>
+        </ul>
+        <div class="form-group">
+            <label asp-for="FirstName" class="control-label"></label>
+            <input asp-for="FirstName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName" class="control-label"></label>
+            <input asp-for="LastName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="control-label"></label>
+            <input asp-for="Address" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="DateOfBirth" class="control-label"></label>
+            <input asp-for="DateOfBirth" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="FavoriteNumber" class="control-label"></label>
+            <input asp-for="FavoriteNumber" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+            </label>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+
